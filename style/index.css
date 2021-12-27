@@ -1,0 +1,41 @@
+main {
+    min-height: 100vh;
+}
+
+.images {
+    height: 200px;
+    width: 400px;
+}
+
+.images:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+    border-radius: 10px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#accroche {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: #063F88;
+}

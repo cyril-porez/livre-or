@@ -32,22 +32,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/connexion.css">
     <title>Connexion</title>
 </head>
 <body>
     <header>
-
+        <nav id="navbar">
+            <ul id="menu">
+                <li><a href='index.php' class='navig'>Accueil</a></li>
+                <li><a href='inscription.php' class='navig'>Inscription</a></li>
+                <li><a href='connexion.php' class='navig'>Connexion</a></li> 
+            </ul>
+        </nav>
     </header>
     <main>
-        <form action="connexion.php" method="post">
-            <input type="text" name="login" placeholder="login">
-            <input type="text" name="password" placeholder="password">
-            <input type="submit" name="connect" value="connecter">
-            <?php
-                echo "<p>$error</p>";
-            ?>
-        </form>
+        <div id="formu">
+            <form action="connexion.php" method="post" id="formulaire">
+                <input type="text" name="login" class="champs" placeholder="login">
+                <input type="text" name="password" class="champs" placeholder="password">
+                <input type="submit" name="connect" id="bouton" value="connecter">
+                <?php
+                    echo "<p>$error</p>";
+                ?>
+            </form>
+        </div>
     </main>
+
     <footer>
 
     </footer>
