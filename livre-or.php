@@ -25,20 +25,20 @@
                 <?php
                     if ($_SESSION["users"] == true) {                                
                             echo "
-                               <li><p id='connex'>Bonjour  " . $_SESSION['users'] ." !</p></li>
-                               <li><a href='index.php' class='navig'>Accueil</a></li>
-                               <li><a href='profil.php' class='navig'>Profil</a></li>
-                               <li><a class='navig' href='commentaire.php'>Commentaire</a></li>
-                               <li><a class='navig' href='livre-or.php'>Livre d'Or</a></li>
-                               <li><a href='deconnexion.php' class='navig'>Déconnexion</a></li>";
-                           
+                                    <li><p id='connex'>Bonjour  " . $_SESSION['users'] ." !</p></li>
+                                    <li><a href='index.php' class='navig'>Accueil</a></li>
+                                    <li><a href='profil.php' class='navig'>Profil</a></li>
+                                    <li><a class='navig' href='commentaire.php'>Commentaire</a></li>
+                                    <li><a class='navig' href='livre-or.php'>Livre d'Or</a></li>
+                                    <li><a href='deconnexion.php' class='navig'>Déconnexion</a></li>
+                                ";                           
                     }
-                    if (isset($_SESSION["users"])  == false) {
+                    else if (isset($_SESSION["users"])  == false) {
                         echo "
-                            <li><a href='index.php' class='navig'>Accueil</a></li>
-                            <li><a href='inscription.php' class='navig'>Inscription</a></li>
-                            <li><a href='connexion.php' class='navig'>Connexion</a></li>
-                        ";
+                                <li><a href='index.php' class='navig'>Accueil</a></li>
+                                <li><a href='inscription.php' class='navig'>Inscription</a></li>
+                                <li><a href='connexion.php' class='navig'>Connexion</a></li>
+                            ";
                     }
                 ?>
             </ul>
@@ -49,17 +49,24 @@
         <?php            
             foreach ($infos as $info) { ?>    
                 <div id="container">
-                    <div id="entête">
-                        <fieldset id="com">
-                            <legend id="contour">
-                                <?php 
-                                    $date = date_create($info['date']);
-                                    echo "Posté par l'utilisateur:" . " " . $info['login']; 
-                                    echo "Posté le :" . " " . date_format($date, "d-M-Y  à H:i:s" ); 
-                                ?>
-                            </legend>
+                    <div id="info">
+                        <div>
+                            <?php 
+                                $date = date_create($info['date']);
+                                echo "Posté le :" . " " . date_format($date, "d-M-Y  à H:i:s" ); 
+                            ?>
+                        </div>
+                        <div>
+                            <?php
+                                echo "Posté par l'utilisateur:" . " " . $info['login'];
+                            ?>
+                        </div>                                    
+
+                    </div>                        
+                        
+                            
                             <?php echo $info['commentaire'] ?>
-                        </fieldset>
+                       
                     </div>                      
                 </div> <?php
             }           

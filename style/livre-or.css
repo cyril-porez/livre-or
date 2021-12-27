@@ -3,29 +3,16 @@
     flex-direction: column;
 }
 
-#entête {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
 
-#date {
-    margin-left: 10px;
-}
 
-#contour {
-    color: red;
+#info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-#com {
-    color: orange;
-    border-radius: 5px;
-    width: 500px;
-} 
+
+
+
 
 h2 {
     color: #063F88;
