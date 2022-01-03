@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  color: white;
+  margin-top: 65px;
+  margin-left: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#navbar {
+    background-color: #03294C;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu {
+    float: right;
+    display: inline-flex;
+    margin-right: 50px;
+    padding-top: 35px;
+    list-style: none;
+  }
+
+  .navig {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  
+  li .navig {
+    display: block;
+    padding: 20px 20px;
+  }
+  
+  li .navig:hover {
+    cursor: pointer;
+    color: red;
+    background-color: #FC7B09;
+  }
+
+  #connex {
+      color: rgb(255, 255, 255);
+      margin-left: 10px;
+      margin-top: 20px;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+ } 
